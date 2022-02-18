@@ -55,6 +55,7 @@ public class User_04_Search extends abstractTest{
 	
 	@Test
 	public void Search_02_Not_Exit_Data() {
+		log.info("Search_Not exit data Step 01: ");
 		searchPage.inputToSearchKeywordTextbox("macbook pro 2015");
 		
 		searchPage.clickToSearchButton();
