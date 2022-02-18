@@ -161,6 +161,7 @@ public class User_04_Search extends abstractTest{
 		
 		log.info("Search_Correct manufacturer Step 05: verify product dispalyed: Apple MacBook Pro 13-inch");
 		verifyEquals(searchPage.isAppleMacbookPro13inch(), "Apple MacBook Pro 13-inch");
+		
 	}
 	
 	@AfterClass(alwaysRun = true)
