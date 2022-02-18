@@ -19,8 +19,10 @@ public class User_01_Register extends abstractTest{
 	registerPageObject registerPage;
 	loginPageObject loginPage;
 	
-	String firstname, lastname, day, month, year, email, company, password, confirmpassword;
-	String invalidEmail, existEmail, smallPassword, errorConfirmPassword;
+	String firstname, lastname, day, month, year, company, confirmpassword;
+	String existEmail, errorConfirmPassword;
+	
+	public static String email, password, invalidEmail, smallPassword;
 	
 	@Parameters({"browser", "url"})
 	@BeforeClass
@@ -47,7 +49,7 @@ public class User_01_Register extends abstractTest{
 		errorConfirmPassword = "123456789";
 	}
 	
-	@Test
+	
 	public void User_01_Register_With_Empty_Data() {
 		log.info("Register_Empty data - Step 01: Click to register button");
 		registerPage.clickToRegisterButton();
@@ -68,7 +70,7 @@ public class User_01_Register extends abstractTest{
 		verifyTrue(registerPage.isConfigPasswordErrorDisplayed());
 	}
 	
-	@Test
+	
 	public void User_02_Register_With_Invalid_Email() {
 		registerPage.refreshPage(driver);
 		
@@ -157,7 +159,6 @@ public class User_01_Register extends abstractTest{
 		
 	}
 	
-	@Test
 	public void User_04_Register_With_Exist_Email() {
 		registerPage.refreshPage(driver);
 		
@@ -195,7 +196,7 @@ public class User_01_Register extends abstractTest{
 		verifyEquals(registerPage.isExistsEmailDisplayed(), "The specified email already exists");
 	}
 	
-	@Test
+
 	public void User_05_Register_With_Password_Small_6_Characters() {
 		registerPage.refreshPage(driver);
 		
@@ -232,7 +233,7 @@ public class User_01_Register extends abstractTest{
 		
 	}
 
-	@Test
+	
 	public void User_06_Register_With_Error_Confirm_Password() {
 		registerPage.refreshPage(driver);
 		
@@ -263,9 +264,11 @@ public class User_01_Register extends abstractTest{
 		log.info("Register_Error confirm password - Step 09: Input password textbox: " + password);
 		registerPage.inputToPasswordTextbox(password);
 		registerPage.inputToConfirmPasswordTextbox(errorConfirmPassword);
+		registerPage.clickToRegisterButton();
 		
 		log.info("Register_Error confirm password - Step 10: Verify confirm password do not match with password");
-		verifyEquals(registerPage.isConfirmPasswordErrorMessageDisplayed(), "The password and confirmation password do not match.");	
+		verifyEquals(registerPage.isConfirmPasswordErrorMessageDisplayed(), "The password and confirmation password do not match.");
+		
 	}
 	
 	

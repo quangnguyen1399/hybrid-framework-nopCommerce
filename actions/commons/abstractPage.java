@@ -221,6 +221,13 @@ public class abstractPage {
 		}
 	}
 	
+	public void checkToCheckboxOrRadio(WebDriver driver, String locator, String... values) {
+		WebElement element = getWebElement(driver, getDynamicLocator(locator, values));
+		if(!element.isSelected()) {
+			element.click();
+		}
+	}
+	
 	public void uncheckToCheckboxOrRadio(WebDriver driver, String locator) {
 		WebElement element = getWebElement(driver, locator);
 		if(element.isSelected()) {

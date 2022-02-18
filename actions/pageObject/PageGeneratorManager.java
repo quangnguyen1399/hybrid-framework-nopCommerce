@@ -15,5 +15,13 @@ public class PageGeneratorManager {
 	public static loginPageObject getLoginPage(WebDriver driver) {
 		return new loginPageObject(driver);
 	}
-	
+	public static myAccountPageObject getMyAccountPage(WebDriver driver) {
+		return new myAccountPageObject(driver);
+	}
+	public static desktopsPageObject getDesktopsPage(WebDriver driver) {
+		return new desktopsPageObject(driver);
+	}
+	public static searchPageObject getSearchPage(WebDriver driver) {
+		return new searchPageObject(driver);
+	}
 }

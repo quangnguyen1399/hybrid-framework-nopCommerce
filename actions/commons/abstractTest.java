@@ -10,6 +10,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.safari.SafariDriver;
 import org.testng.Assert;
 import org.testng.Reporter;
 
@@ -40,6 +41,8 @@ public class abstractTest {
 		}else if(browserName.equalsIgnoreCase("edge_chromium")) {
 			WebDriverManager.edgedriver().setup();
 			driver = new EdgeDriver();
+		}else if(browserName.equalsIgnoreCase("safari")) {
+			driver = new SafariDriver();
 		}else {
 			throw new RuntimeException("Please input browser name!");
 		}
