@@ -3,17 +3,15 @@
   <parameter name="url" value="https://demo.nopcommerce.com/"/>
   <listeners>
   	<listener class-name="commons.MethodListener" />
-  	<listener class-name="reportConfig.ExtentReportListenerVersion2" />
-  	<!-- <listener class-name="reportConfig.AllureTestListener" /> -->
+  	<listener class-name="reportConfig.ExtentReportListenerVersion4" />
   </listeners>
   <test name="Run on CHROME">
   	<parameter name="browser" value="chrome"/>
     <classes>
       <class name="com.nopcommerce.user.User_01_Register"/>
-<!--       <class name="com.nopcommerce.user.User_02_Login"/>
-	  <class name="com.nopcommerce.user.User_03_My_Account"/> -->
+      <class name="com.nopcommerce.user.User_02_Login"/>
+	  <class name="com.nopcommerce.user.User_03_My_Account"/>
 	  <class name="com.nopcommerce.user.User_04_Search"/>
-	  
     </classes>
   </test>
 </suite>

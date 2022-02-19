@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <classpath>
 	<classpathentry kind="src" path="testcases"/>
-	<classpathentry kind="src" path="testdatas"/>
 	<classpathentry kind="src" path="actions"/>
 	<classpathentry kind="src" path="interfaces"/>
 	<classpathentry kind="src" path="resources"/>
@@ -36,6 +35,10 @@
 	<classpathentry kind="lib" path="libraries/sqlite-jdbc-3.8.11.1.jar"/>
 	<classpathentry kind="lib" path="libraries/velocity-1.4.jar"/>
 	<classpathentry kind="lib" path="libraries/webdrivermanager-4.2.0.jar"/>
+	<classpathentry kind="lib" path="libraries/bsh-2.0b4.jar"/>
+	<classpathentry kind="lib" path="libraries/extentreports-4.0.9.jar"/>
+	<classpathentry kind="lib" path="libraries/httpmime-4.5.2.jar"/>
+	<classpathentry kind="lib" path="libraries/jcommander-1.48.jar"/>
 	<classpathentry kind="var" path="JRE_LIB"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/jdk1.8.0_271"/>
 	<classpathentry kind="output" path="bin"/>
